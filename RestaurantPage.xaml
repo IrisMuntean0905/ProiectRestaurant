@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurant.RestaurantPage"
+             BackgroundColor="#F3F3F3"
+             Title="RestaurantPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20" Spacing="20">
+            <Label Text="Restaurant Name: " FontAttributes="Bold" FontSize="18"/>
+            <Entry Text="{Binding Name}" Placeholder="Enter restaurant name" />
+
+            <Label Text="Restaurant Address: " FontAttributes="Bold" FontSize="18" />
+            <Entry Text="{Binding Address}" Placeholder="Enter restaurant address" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save Restaurant" BackgroundColor="Purple" Grid.Column="0" MaximumWidthRequest="200" Clicked="OnSaveButtonClicked" CornerRadius="5" />
+                <Button Text="Delete" BackgroundColor="Purple" Grid.Column="1"  MaximumWidthRequest="200" Clicked="OnDeleteButtonClicked" CornerRadius="5"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

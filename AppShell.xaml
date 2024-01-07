@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Restaurant.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Restaurant"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+     Title="Restaurant"
+     ContentTemplate="{DataTemplate local:RestaurantsPage}"
+     />
+        <ShellContent
+     Title="Menus"
+     ContentTemplate="{DataTemplate local:MenusR}"
+     />
+        <ShellContent
+        Title="Reservations"
+        ContentTemplate="{DataTemplate local:ReservationsPage}"
+        />
+    </TabBar>
+
+</Shell>

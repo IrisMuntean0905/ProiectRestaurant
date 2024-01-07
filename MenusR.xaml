@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurant.MenusR"
+             Title="Menus Selection"
+             BackgroundColor="#F3F3F3"
+             Padding="20">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Menu" Clicked="OnMenuAddedClicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="listView" ItemSelected="OnViewSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Frame BorderColor="Purple" CornerRadius="25" Padding="20" Margin="0, 0, 0, 20">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding FoodCategoryName}" VerticalOptions="Center" />
+                        </StackLayout>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

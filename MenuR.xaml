@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurant.MenuR"
+             Title="Menu Changes"
+             BackgroundColor="#F3F3F3"
+             Padding="20">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Category Name:" />
+            <Entry Text="{Binding FoodCategoryName}" Placeholder="Enter category name" />
+
+            <Label Text="Price:" Margin="0,20,0,0"/>
+            <Entry Text="{Binding Price}" Placeholder="Enter price" />
+
+            <Label Text="Description:" Margin="0,20,0,0"/>
+            <Entry Text="{Binding Description}" Placeholder="Enter description" />
+
+            <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                <Button Text="Save Menu" Margin="0,0,10,0" Grid.Column="0" MaximumWidthRequest="200" BackgroundColor="Purple" CornerRadius="5" Clicked="OnSaveButtonClicked" />
+                <Button Text="Delete" BackgroundColor="Purple" Grid.Column="1" MaximumWidthRequest="200" CornerRadius="5" Clicked="OnDeleteButtonClicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
