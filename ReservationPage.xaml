@@ -5,7 +5,7 @@
              BackgroundColor="#F3F3F3"
              Padding="20">
     <ScrollView>
-        <StackLayout Margin="10">
+        <StackLayout Margin="20">
             <Label Text="Order" FontSize="20" FontAttributes="Bold" />
 
             <Label Text="Select Restaurant" Margin="0,20,0,0"/>

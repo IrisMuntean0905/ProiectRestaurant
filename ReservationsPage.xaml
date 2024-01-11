@@ -11,16 +11,18 @@
     </ContentPage.ToolbarItems>
 
 
-    <ListView x:Name="listView" ItemSelected="OnViewSelected">
+    <ListView x:Name="listView" ItemSelected="OnViewSelected" RowHeight="60">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <Frame BorderColor="Purple" CornerRadius="25" Padding="20" Margin="0, 0, 0, 20">
-                        <StackLayout Spacing="10">
-                            <Label Text="{Binding RestaurantName}" />
-                            <Label Text="{Binding Date}"  Margin="0, 5, 0, 0"/>
-                        </StackLayout>
-                    </Frame>
+                    <Grid>
+                        <!--<Frame BorderColor="Purple" CornerRadius="25" Padding="20" Margin="0, 0, 0, 20">-->
+                            <StackLayout Spacing="10">
+                                <Label Text="{Binding RestaurantName}" />
+                                <Label Text="{Binding Date}"  Margin="0, 2, 0, 0"/>
+                            </StackLayout>
+                        <!--</Frame>-->
+                    </Grid>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>

@@ -7,22 +7,25 @@
         <ToolbarItem Text="Add Restaurant" Clicked="OnRestaurantAddedClicked" />
     </ContentPage.ToolbarItems>
 
-    <AbsoluteLayout>
-        <Image Source="restaurant.jpg" Aspect="AspectFit" Opacity="0.7" />
-        <ListView x:Name="listView" ItemSelected="OnViewSelected">
+    <Grid>
+        <Image Source="restaurant.jpg" Aspect="AspectFill" Opacity="0.7" />
+        <ListView x:Name="listView" ItemSelected="OnViewSelected" RowHeight="60">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame BorderColor="Purple" CornerRadius="25" Padding="20" Margin="20, 20, 20, 20">
-                            <StackLayout Orientation="Horizontal">
+                        <Grid>
+                            <!--<Frame BorderColor="Purple" CornerRadius="25" Padding="20" Margin="20, 20, 20, 20">-->
+                            <StackLayout Orientation="Vertical">
                                 <Label Text="{Binding Name}" HorizontalOptions="Center" FontSize="Medium" />
                                 <Label Text="{Binding Address}" HorizontalOptions="Center" Margin="0, 5, 0, 0" />
+                                <!--<BoxView Color="Purple" VerticalOptions="EndAndExpand" CornerRadius="25" Margin="20, 20, 20, 20" HeightRequest="10" />-->
                             </StackLayout>
-                        </Frame>
+                            <!--</Frame>-->
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </AbsoluteLayout>
+    </Grid>
     
 </ContentPage>

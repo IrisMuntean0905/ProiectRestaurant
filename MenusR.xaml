@@ -12,11 +12,13 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <Frame BorderColor="Purple" CornerRadius="25" Padding="20" Margin="0, 0, 0, 20">
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding FoodCategoryName}" VerticalOptions="Center" />
-                        </StackLayout>
-                    </Frame>
+                    <Grid>
+                        <!--<Frame BorderColor="Purple" CornerRadius="25" Padding="20" Margin="0, 0, 0, 20">-->
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding FoodCategoryName}" VerticalOptions="Center" />
+                            </StackLayout>
+                        <!--</Frame>-->
+                    </Grid>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
